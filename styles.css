@@ -1,0 +1,143 @@
+body {
+    background-color: #333333;
+}
+
+#header {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 3em;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 1.5em;
+    color: white;
+}
+
+p {
+    font-family: verdana;
+    color: white;
+}
+
+/* Link styles  */
+a:link {
+    color: yellow;
+}
+
+a:visited {
+    color: burlywood;
+}
+
+/* ---- Button styles ---- */
+#start {
+    width: 300px;
+    height: 50px;
+    border-width: 3px;
+    border-color: white;
+    background-color:#ffcc00;
+    font-family: Verdana;
+    font-size: 1em;
+}
+
+#start:hover {
+    background-color: #ffdd54;
+}
+
+.accountButton {
+    border-width: 3px;
+    border-color: white;
+    background-color: white;
+}
+
+#accept {
+    background-color: greenyellow;
+}
+
+#decline {
+    background-color: orangered;
+}
+
+#startcontainer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#logohead {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+img {
+    width: 400px;
+    height: auto;
+}
+
+.icon {
+    width: 200px;
+    height: auto;
+}
+
+#container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2em;
+    width: 60%;
+}
+  
+#left,#mid,#right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.privacy {
+    width: 100px;
+    height: 50px;
+    border-width: 3px;
+    border-color: white;
+    font-size: 1em;
+}
+
+
+
+#h21 {
+    text-align: left;
+}
+
+/* Tooltip styles */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+/* Tooltip text */
+.tooltip .tooltiptext {
+    font-family: verdana;
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+}
+  
+/* Show the tooltip text */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
