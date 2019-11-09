@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome!</title>
+</head>
+
+<body>
+
+    <!-- Header content -->
+    <div id="header">
+        <div id="logohead" style="overflow:hidden; display: flex; align-items: center;">
+        <a href="index.html"><img src="logo_1.PNG"></a>
+        <a href="https://www.commbank.com.au/support/contact-us.html" target="_blank"><button id="contactbutton" type="button" style="float: right; position:absolute; right: 20px; margin-top: -25px; border-color: black;">Contact Us</button></a>
+        </div>
+    </div>
+
+    <h1>Thanks, you're almost there!</h1>
+
+    <p style="text-align: center;">You should recieve an email confirmation soon which will contain your account details and how to log in to start using our online banking services.</p>
+    <br><br><br>
+
+    <!-- Feedback section with css animated properties and JS alert -->
+    <p style="text-align: center;">Please let us know how your experience was today by clicking on a button below.</p>
+    <div id="container">
+        <div id="left">
+            <img class="feedback" src="feedback1.png" onclick="feedbackfunc()">
+        </div>
+        <div id="mid">
+            <img class="feedback" src="feedback2.png" onclick="feedbackfunc()">
+        </div>
+        <div id="right">
+            <img class="feedback" src="feedback3.png" onclick="feedbackfunc()">
+        </div>
+    </div>
+
+</body>
+
+<!-- Javascript links -->
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script type="text/javascript" src="vanilla-tilt.js"></script>
+<script type="text/javascript" src="scripts.js"></script>
+</html>

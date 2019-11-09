@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Welcome to CommBank</title>
+        <title>Sign Up</title>
     </head>
 
     <body>
-        <!-- Header with logo -->
+        <!-- Header with logo and contact button (links to official contact page) -->
         <div id="header">
-            <div id="logohead">
-            <img src="logo_1.PNG">
+            <div id="logohead" style="overflow:hidden; display: flex; align-items: center;">
+            <img src="logo_1.png">
+            <a href="https://www.commbank.com.au/support/contact-us.html" target="_blank"><button id="contactbutton" type="button" style="float: right; position:absolute; right: 20px; margin-top: -25px; border-color: black;">Contact Us</button></a> 
             </div>
         </div>
         
-        <!-- Intro content -->
+        <!-- Intro content with tilt.js applied to button (links to form page)-->
         </div>
             <h1>Welcome to CommBank</h1>
             <h2>Banking with us is easy, we'll show you how!</h2>
-        <div id="startcontainer" data-tilt data-tilt-scale="1.1">
-            <button id="start"> <strong>Let's get started</strong></button>
+        <div id="startcontainer">
+            <a href="form.html"><button id="start" data-tilt data-tilt-scale="1.1"><strong>Let's get started</strong></button></a>
         </div>
 
         <!-- Container with logos and extra text descriptions of services -->
@@ -35,6 +36,7 @@
                 <p>Our financial planning services can help you reach your goals, no matter how big or small. Our friendly Australian based support team is also available to answer your questions.</p>
             </div>
         </div>
+
     </body>
 
     <!-- Javascript links -->

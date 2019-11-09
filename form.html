@@ -5,36 +5,139 @@
     </head>
 
     <body>
+        <!-- Header content -->
         <div id="header">
-                <div id="logohead">
+                <div id="logohead" style="overflow:hidden; display: flex; align-items: center;">
                 <img src="logo_1.PNG">
+                <a href="https://www.commbank.com.au/support/contact-us.html" target="_blank"><button id="contactbutton" type="button" style="float: right; position:absolute; right: 20px; margin-top: -25px; border-color: black;">Contact Us</button></a>
+                </div>
+
+                <div id="myProgress">
+                    <div id="myBar"></div>
+                </div>
+        </div>
+
+        
+
+            <h1>Let's Get Started</h1>
+            
+        <!-- Form section - parts are shown/hidden with JS as the user progresses -->
+        <form id="regForm">
+
+            <!-- Part 1 - Prerequisite information -->
+            <div id="part1">
+                    <p>Welcome to CommBank. We should have your account set up soon, but before we continue please read our <a href="https://www.commbank.com.au/content/commbank-neo/security-privacy/general-security/privacy-policy-html-version.html" target="_blank">privacy policy.</a></p>
+
+                <h2 class="h21">I have read and agree to the privacy policy.</h2>
+        
+                <button type="button" id="accept" class="privacy">✓</button>
+                <button type="button" id="decline" class="privacy">X</button>
+
+                <br><br>
+                <h2 class="h21">Who is this account for?</h2>
+
+                    <!-- Buttons with hover tooltip using css -->
+                    <div class="tooltip">
+                        <span class="tooltiptext">Just Me</span>
+                        <img src="onlyme.png" class="sharedbutton">
+                        <br>
+                        <input type="radio" name="shared" value="individual" style="margin-left: 45px;">
+                    </div>
+                    <div class="tooltip">
+                        <span class="tooltiptext">Shared</span>
+                        <img src="shared.png" class="sharedbutton">
+                        <br>
+                        <input type="radio" name="shared" value="shared" style="margin-left: 45px;">
+                    </div>
+ 
+                        <br><br>
+
+                        <!-- Show and scroll to next part button -->
+                        <button type="button" class="nextbutton" onclick="showpart2()">Next</button>
+                    
+
+            </div>
+
+            <!-- Part 2 - Contact Info -->
+            <div id="part2" style="display: none;">
+                <h2 class="h21">Contact Info</h2>
+                <p>Title</p>
+                <select name="title">
+                    <option value="mr">Mr</option>
+                    <option value="ms">Ms</option>
+                    <option value="mrs">Mrs</option>
+                    <option value="miss">Miss</option>
+                </select>
+                <p>First Name</p>
+                <input class="textbox" name="firstname" type="text" placeholder="John">
+                <p>Last Name</p>
+                <input class="textbox" name="lastname" type="text" placeholder="Smith">
+                <p>Email Address</p>
+                <input class="textbox" type="email" placeholder="you@gmail.com">
+                <p>Mobile Number</p>
+                <input class="textbox" type="tel" placeholder="+00 000 000 000">
+                <p class="smalltext">How we use your information:<br>
+                        • To confirm your identity or contact you if we need to tell you something important<br>
+                        • Send you notifications about your account - including your login details.</p>
+
+                        <!-- Show and scroll to next part button -->
+                        <button type="button" class="nextbutton" onclick="showpart3()">Next</button>
+            </div>
+
+            <!-- Part 3 - Personal Details -->
+            <div id="part3" style="display: none;">
+                <h2 class="h21">Personal Details</h2>
+                <p>D.O.B.</p>
+                <input type="date">
+                <p>Home Address</p>
+                <input class="textbox" type="text" placeholder="123 Example Street, Suburb, NSW, 2000">
+                <p class="smalltext">Please ensure that the information you provide here matches that on your identification document/s.</p>
+                <br>
+                <!-- File upload functionality not implemented - Visual purpose only -->
+                <p>ID Photo Upload</p>
+                <input id="fileupload" type="file">
+                <br><br>
+
+                <!-- Show and scroll to next button -->
+                <button type="button" class="nextbutton" onclick="showpart4()">Next</button>
+            </div>
+
+            <!-- Part 4 - Card choice with animated css -->
+            <div id="part4" style="display: none;">
+                <h2 class="h21">Choose your card:</h2>
+                <div class="cardbox" id="left">
+                    <img src="LowRate.jpg">
+                    <ul>
+                        <li>13.24% p.a purchase interest rate</li>
+                        <li>$59 annual fee</li>
+                        <li>Credit limit of $500</li>
+                    </ul>
+                    <button class="cardbutton" type="button" id="card1">Low Rate</button>
+                    <br>
+                </div>
+                <div class="cardbox" id="mid">
+                    <img src="LowFee.jpg">
+                    <ul>
+                        <li>$0 annual fee in the first year and subsequent years when you spend $1,000</li>
+                        <li>19.74% p.a. purchase interest rate</li>
+                        <li>Minimum credit limit of $500</li>
+                    </ul>
+                    <button class="cardbutton" type="button">Low Fee</button>
+                    <br>
+                    
+                    <!-- Submit button which navigates to final page -->
+                    <a href="welcome.html"><button type="button" id="submitbutton">Submit</button></a> 
                 </div>
             </div>
 
-            <h1>Let's Get Started</h1>
 
-            <p>Welcome to CommBank. We should have your account set up soon, but before we continue please read our <a href="https://www.commbank.com.au/content/commbank-neo/security-privacy/general-security/privacy-policy-html-version.html" target="_blank">privacy policy.</a></p>
-            <h2 id="h21">I have read and agree to the privacy policy.</h2>
-        
-            <button id="accept" class="privacy">✓</button>
-            <button id="decline" class="privacy">X</button>
-
-            <br><br>
-            <h2 id="h21">Who is this account for?</h2>
-
-            <form>
-                <div class="tooltip">
-                    <span class="tooltiptext">Just Me</span>
-                    <input type="image" src="onlyme.png" width="100" height="50" class="accountButton" alt="Just Me">
-                </div>
-                <div class="tooltip">
-                    <span class="tooltiptext">Shared</span>
-                    <input type="image" src="shared.png" width="100" height="50" class="accountButton" alt="Shared">
-                </div>
-            </form>
+        </form>
         
     </body>
+
+<!-- Javascript links -->
 <link rel="stylesheet" type="text/css" href="styles.css">
 <script type="text/javascript" src="vanilla-tilt.js"></script>
 <script type="text/javascript" src="scripts.js"></script>
+<script type="text/javascript" src="nanobar.js"></script>
 </html>

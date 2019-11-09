@@ -1,3 +1,5 @@
+/* Universal Styles */
+
 body {
     background-color: #333333;
 }
@@ -6,6 +8,21 @@ body {
     background-color: white;
     padding: 0;
     margin: 0;
+}
+
+.pagebreak {
+    height: 400px;
+}
+
+.textbox {
+    width: 250px;
+    height: 25px;
+}
+
+#fileupload {
+    font-family: verdana;
+    font-size: 0.8em;
+    color: white;
 }
 
 /* ---- Text Styles ---- */
@@ -29,6 +46,33 @@ p {
     color: white;
 }
 
+a {
+    font-family: verdana;
+    font-size: 1em;
+}
+
+ul {
+    font-family: verdana;
+    color: white;
+    font-size: 0.8em;
+}
+
+.h21 {
+    text-align: left;
+}
+
+.smalltext {
+    font-size: 0.8em;
+}
+
+.nextbutton {
+    font-size: 0.8em;
+}
+
+.nextbutton:hover {
+    background-color: #ffdd54;
+}
+
 /* Link styles  */
 a:link {
     color: yellow;
@@ -39,6 +83,20 @@ a:visited {
 }
 
 /* ---- Button styles ---- */
+button {
+    width: 200px;
+    height: 50px;
+    border-width: 3px;
+    border-color: white;
+    background-color: #ffcc00;
+    font-family: verdana;
+    transition: background-color 0.5s ease-out;
+}
+
+button:focus {
+    border-color: black;
+}
+
 #start {
     width: 300px;
     height: 50px;
@@ -74,8 +132,10 @@ a:visited {
 
 #logohead {
     text-align: left;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
 }
+
+/* Image Styles */
 
 img {
     width: 400px;
@@ -86,6 +146,24 @@ img {
     width: 200px;
     height: auto;
 }
+
+.icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease
+}
+
+.feedback {
+    width: 150px;
+    height: auto;
+}
+
+.sharedbutton {
+    width: 100px;
+    height: 50px;
+    background-color: white;
+}
+
+/* Div styles - for first and last page */
 
 #container {
     margin-left: auto;
@@ -104,6 +182,15 @@ img {
     align-items: center;
     padding-left: 40px;
     padding-right: 40px;
+    opacity: 0;
+}
+
+.cardbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    padding-right: 40px;
 }
 
 .privacy {
@@ -114,19 +201,48 @@ img {
     font-size: 1em;
 }
 
+/* ANIMATION KEYFRAMES */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
+/* Animations */
 
-#h21 {
-    text-align: left;
+#left {
+    animation: fadeIn 3s 0.5s forwards;
+}
+
+#mid {
+    animation: fadeIn 3s 1s forwards;
+}
+
+#right {
+    animation: fadeIn 3s 1.5s forwards;
+}
+
+#part1, #part2, #part3, #part4 {
+    animation: fadeIn 1s;
+}
+
+.feedback:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease
 }
 
 /* Tooltip styles */
+
 .tooltip {
     position: relative;
     display: inline-block;
 }
   
 /* Tooltip text */
+
 .tooltip .tooltiptext {
     font-family: verdana;
     visibility: hidden;
@@ -140,6 +256,21 @@ img {
 }
   
 /* Show the tooltip text */
+
 .tooltip:hover .tooltiptext {
     visibility: visible;
+}
+
+/* Progress Bar style */
+
+#myProgress {
+    width: 100%;
+    background-color: white;
+}
+
+#myBar {
+    width: 1%;
+    height: 30px;
+    background-color: #79ff4d;
+    transition: width 0.4s ease;
 }
